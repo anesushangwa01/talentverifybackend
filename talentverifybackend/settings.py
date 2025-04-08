@@ -130,7 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Allow frontend to make requests
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React frontend URL
-    "talentverifybackend.onrender.com" # Add your production frontend URL here
+    "https://talent-verify-blond.vercel.app" # Add your production frontend URL here
 ]
 
 
