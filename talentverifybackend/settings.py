@@ -35,7 +35,9 @@ SECRET_KEY = 'django-insecure-w%@kdy2%$f-o^l*jtgm^)2qp+-j)2hs*76nej&1@2hfr-=^&et
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "talentverifybackend.onrender.com" # Add your production frontend URL here
+]
 
 
 # Application definition
