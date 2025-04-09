@@ -6,15 +6,19 @@ from .models import Company,Employee
 from .serializers import CompanySerializer,EmployeeSerializer
 
 
+
 @api_view(['POST'])
 def add_company(request):
     if request.method == 'POST':
-        print("Incoming data:", request.data)  # Check the structure of incoming JSON for testing and debugging 
+        print("Incoming data:", request.data)  # Debugging to check the structure of incoming JSON
+
+        # Proceed with serializer validation and saving the company without additional validation
         serializer = CompanySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        print("Validation errors:", serializer.errors)  #  Shows what went wrong
+
+        print("Validation errors:", serializer.errors)  # Shows what went wrong
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     

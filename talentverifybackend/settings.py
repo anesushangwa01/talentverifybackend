@@ -15,7 +15,10 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from urllib.parse import urlparse
+import base64
+from cryptography.fernet import Fernet
 
+FERNET_KEY = 'H2WRWYpBfDO417qPU9eSUI5TbH2Lxi523ktocuIfzx8=' 
 
 load_dotenv()
 
@@ -36,7 +39,8 @@ SECRET_KEY = 'django-insecure-w%@kdy2%$f-o^l*jtgm^)2qp+-j)2hs*76nej&1@2hfr-=^&et
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "talentverifybackend.onrender.com" # Add your production frontend URL here
+    "talentverifybackend.onrender.com" ,
+    '127.0.0.1'  # Add your production frontend URL here
 ]
 
 
